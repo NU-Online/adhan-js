@@ -2,6 +2,17 @@ import CalculationParameters from './CalculationParameters';
 import { Rounding } from './Rounding';
 
 const CalculationMethod = {
+  // Falakiyah
+  Falakiyah() {
+    const params = new CalculationParameters('Falakiyah', 20, 18);
+    params.methodAdjustments.asr = 2;
+    params.methodAdjustments.dhuhr = 2;
+    params.methodAdjustments.fajr = 2;
+    params.methodAdjustments.isha = 2;
+    params.methodAdjustments.maghrib = 2;
+    params.methodAdjustments.sunrise = 0;
+    return params;
+  },
   // Muslim World League
   MuslimWorldLeague() {
     const params = new CalculationParameters('MuslimWorldLeague', 18, 17);
